@@ -176,12 +176,7 @@
   .skeleton::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent); transform: translateX(-100%); animation: skeleton 1.2s infinite; }
   @keyframes skeleton { to { transform: translateX(100%); } }
 
-  /* Reduce motion */
-  @media (prefers-reduced-motion: reduce) {
-    .reveal-visible { transition: none !important; }
-    .line-draw.animated { animation: none !important; }
-    .skeleton::after { animation: none !important; }
-  }
+  /* Reduce motion — desativado por solicitação (sempre animar) */
 
   /* Marquee (logos) */
   @keyframes marquee {
@@ -189,7 +184,5 @@
     to { transform: translateX(-50%); }
   }
   .animate-marquee { animation-name: marquee; animation-timing-function: linear; animation-iteration-count: infinite; }
-  @media (prefers-reduced-motion: reduce) {
-    .animate-marquee { animation: none !important; }
-  }
+  /* Reduce motion — desativado por solicitação (sempre animar) */
 }
