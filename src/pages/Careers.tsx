@@ -37,28 +37,45 @@ const benefits = [
 
 const openPositions = [
   {
-    title: "Engenheiro(a) Ambiental",
-    department: "Meio Ambiente",
+    title: "Técnico(a) em Enfermagem do Trabalho",
+    department: "Saúde",
     type: "CLT",
-    location: "Rio de Janeiro - RJ",
-    description: "Profissional para atuar em projetos de monitoramento ambiental e licenciamento.",
-    requirements: ["Graduação em Engenharia Ambiental", "Experiência em LDAR", "Conhecimento em legislação ambiental"]
+    location: "Ipojuca - PE",
+    description: "Seleção de novos colaboradores.",
+    requirements: [
+      "02 anos de experiência comprovados em carteira",
+      "Análise documental de saúde das contratadas (PCMSO)",
+      "Verificar o ASO de cada prestador de serviço, emitindo parecer técnico quanto à conformidade",
+      "Realizar arquivamento dos documentos de SMS das empresas prestadoras de serviço",
+      "Conhecimento de normas de saúde",
+      "Boa escrita e oral",
+      "Conhecimento de pacote Office",
+      "Experiência em ministrar treinamentos de saúde",
+      "Conhecimento em inspeções de campo",
+      "Habilitação B",
+      "Proatividade",
+      "Trabalho em equipe",
+      "Conhecimento de gestão"
+    ]
   },
   {
-    title: "Técnico(a) em Segurança do Trabalho",
+    title: "Técnico(a) de Segurança",
     department: "Segurança",
     type: "CLT",
-    location: "Rio de Janeiro - RJ",
-    description: "Profissional para desenvolver atividades de segurança do trabalho em indústrias.",
-    requirements: ["Curso Técnico em Segurança do Trabalho", "Experiência em indústria", "Conhecimento em NRs"]
-  },
-  {
-    title: "Consultor(a) em SMS",
-    department: "Consultoria",
-    type: "CLT",
-    location: "Rio de Janeiro - RJ",
-    description: "Profissional sênior para liderar projetos de consultoria em SMS.",
-    requirements: ["Ensino Superior", "Experiência em gestão SMS", "Liderança de equipes"]
+    location: "Manaus - AM",
+    description: "Seleção de novos colaboradores.",
+    requirements: [
+      "Conhecimento de normas de segurança",
+      "Boa escrita e oral",
+      "Conhecimento de pacote Office",
+      "Experiência em ministrar treinamentos de segurança",
+      "Conhecimento em inspeções de campo",
+      "Conhecimento em higiene ocupacional",
+      "Habilitação B",
+      "Proatividade",
+      "Saber trabalhar em equipe",
+      "Conhecimento de gestão"
+    ]
   }
 ];
 
@@ -79,6 +96,12 @@ export default function Careers() {
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">
             Por que Trabalhar na Monitorar?
           </h2>
+          {/* Banner imagem de recrutamento */}
+          <div className="mb-10">
+            <div className="rounded-2xl overflow-hidden shadow-md">
+              <img src="/monitorar/trabalhar-img.jpeg" alt="Vagas Monitorar" className="w-full h-auto object-cover" loading="lazy" />
+            </div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <Card key={index} className="card-service text-center">
@@ -103,14 +126,14 @@ export default function Careers() {
               Crescimento Extraordinário
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Nos últimos 5 anos, crescemos 8.000% em faturamento e chegamos à 33ª colocação 
+              Nos últimos 5 anos, crescemos 800% em faturamento e chegamos à 33ª colocação 
               no ranking da revista Exame. Esse crescimento cria oportunidades únicas para nossos colaboradores.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-secondary mb-2">8.000%</div>
+              <div className="text-4xl font-bold text-secondary mb-2">800%</div>
               <div className="text-muted-foreground">Crescimento em 5 anos</div>
             </div>
             <div>

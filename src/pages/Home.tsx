@@ -13,7 +13,9 @@ import {
   Building2,
   Ship,
   Wrench,
-  HardHat
+  HardHat,
+  Flame,
+  CheckCircle
 } from "lucide-react";
 import heroImage from "@/assets/hero-refinery.jpg";
 import { ParallaxHero } from "@/components/ParallaxHero";
@@ -24,8 +26,8 @@ import { LogosCarousel } from "@/components/LogosCarousel";
 import { OfferingsSection } from "@/components/OfferingsSection";
 
 const stats = [
-  { number: "15", label: "Anos de experiência", icon: Award },
-  { number: "8000%", label: "Crescimento em faturamento", icon: TrendingUp },
+  { number: "16", label: "Anos de experiência", icon: Award },
+  { number: "800%", label: "Crescimento em faturamento", icon: TrendingUp },
   { number: "33ª", label: "Colocação ranking Exame", icon: Globe },
   { number: "100+", label: "Clientes atendidos", icon: Users },
 ];
@@ -34,19 +36,19 @@ const services = [
   {
     icon: Leaf,
     title: "Meio Ambiente",
-    description: "Qualidade do ar, áreas impactadas, avaliação de ruído e licenciamento ambiental.",
+    description: "Desenvolvemos soluções sustentáveis para proteger e melhorar o meio ambiente: auditoria e certificação ambiental, qualidade do ar, avaliação geoambiental, monitoramento de efluentes e licenciamento.",
     items: ["LDAR", "PTS", "Procon Fumaça Preta", "Áreas Impactadas", "Ruído Extramuros", "Licenciamento"]
   },
   {
     icon: Shield,
     title: "Segurança do Trabalho",
-    description: "Gestão de SMS, HAZOP, higiene ocupacional, auditorias e treinamentos especializados.",
+    description: "Consultoria, planejamento e implementação de programas, elaboração de laudos e programas, treinamentos, higiene e saúde ocupacional, e gestão de SMS.",
     items: ["Gestão de SMS", "HAZOP", "Higiene Ocupacional", "Auditorias", "Treinamentos"]
   },
   {
     icon: Award,
     title: "Representação Dräger",
-    description: "Equipamentos e soluções de segurança e detecção de gases da marca Dräger.",
+    description: "A Dräger é líder internacional em tecnologia de segurança desde 1889: soluções para indústria química, incêndio, água, mineração, petróleo e gás e muito mais.",
     items: ["Detectores de Gases", "Equipamentos de Proteção", "Calibração", "Manutenção"]
   }
 ];
@@ -55,7 +57,7 @@ const segments = [
   { icon: Factory, name: "Petroquímica" },
   { icon: Building2, name: "Indústria" },
   { icon: Ship, name: "Offshore" },
-  { icon: Truck, name: "Termoelétrica" },
+  { icon: Flame, name: "Termoelétrica" },
   { icon: Wrench, name: "Siderurgia" },
   { icon: HardHat, name: "Construção Civil" },
 ];
@@ -72,8 +74,7 @@ export default function Home() {
         />
         <Reveal delayMs={80}>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed opacity-90">
-            Mantenha sua empresa protegida: com serviços de segurança do trabalho, 
-            saúde e meio ambiente alinhados com a estratégia da sua empresa.
+            Mantenha sua empresa protegida: com serviços de segurança do trabalho, saúde e meio ambiente alinhados com a estratégia da sua empresa.
           </p>
         </Reveal>
       </ParallaxHero>
@@ -114,33 +115,34 @@ export default function Home() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="section-title">Nossos Serviços</h2>
+            <h2 className="section-title">PRINCIPAIS ÁREAS DE ATUAÇÃO</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Oferecemos soluções completas em segurança, saúde e meio ambiente
+              Oferecemos soluções completas em segurança do trabalho, saúde e meio ambiente
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="card-service">
-                <CardContent className="p-8">
+              <Card key={index} className="card-service h-full flex flex-col">
+                <CardContent className="p-8 flex flex-col h-full">
                   <Reveal className="flex justify-center mb-6" delayMs={index * 70}>
                     <div className="p-4 bg-gradient-to-r from-secondary to-accent rounded-full">
                       <service.icon className="h-8 w-8 text-white" />
                     </div>
                   </Reveal>
                   <Reveal delayMs={120 + index * 70}>
-                    <h3 className="text-xl font-bold text-center mb-4">{service.title}</h3>
-                    <p className="text-muted-foreground text-center mb-6">{service.description}</p>
+                    <h3 className="text-xl font-bold mb-3 text-primary text-center md:text-left">{service.title}</h3>
+                    <p className="text-muted-foreground mb-5 text-center md:text-left">{service.description}</p>
                   </Reveal>
-                  <div className="space-y-2 mb-6">
+                  <ul className="space-y-2 mb-6">
                     {service.items.map((item, idx) => (
-                      <Badge key={idx} variant="outline" className="mr-2 mb-2">
-                        {item}
-                      </Badge>
+                      <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <CheckCircle className="h-4 w-4 text-success mt-0.5" />
+                        <span>{item}</span>
+                      </li>
                     ))}
-                  </div>
-                  <div className="text-center">
+                  </ul>
+                  <div className="text-center mt-auto">
                     <Button variant="outline" className="w-full">
                       Fale com um Consultor
                     </Button>
@@ -186,7 +188,7 @@ export default function Home() {
             a manter os mais altos padrões de segurança e sustentabilidade.
           </p>
           <Button className="btn-hero text-lg px-12 py-6">
-            Solicitar Orçamento
+            Fale com um Consultor
           </Button>
         </div>
       </section>

@@ -59,7 +59,7 @@ export const Footer = () => {
                  className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com/company/monitorarconsultoria" target="_blank" rel="noopener noreferrer"
+              <a href="https://linkedin.com/company/monitorar-consultoria" target="_blank" rel="noopener noreferrer"
                  className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>

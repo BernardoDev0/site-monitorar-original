@@ -4,18 +4,18 @@ import { Leaf, Eye, ThumbsUp } from "lucide-react";
 const values = [
   {
     icon: Leaf,
-    title: "Missão",
-    description: "Melhorar o ar do mundo."
+    title: "Nossa Missão",
+    description: "Cuidar de vidas e garantir um futuro sustentável para as famílias do nosso país."
   },
   {
     icon: Eye,
-    title: "Visão",
-    description: "Ser a melhor empresa na área de qualidade do ar, emissões atmosféricas e meteorologia do mundo em 5 anos."
+    title: "Nossa Visão",
+    description: "Ser a empresa mais reconhecida nas áreas de meio ambiente e segurança do trabalho do país."
   },
   {
     icon: ThumbsUp,
-    title: "Valores",
-    description: "Foco no cliente, Senso de dono, Inovação, Paixão pelo que fazemos, Produtividade."
+    title: "Nossos Valores",
+    description: "Oportunidades, Trabalho em equipe, Senso de dono, Respeito, Família."
   }
 ];
 
@@ -36,32 +36,16 @@ export default function About() {
           <Card className="p-8">
             <CardContent className="prose prose-lg max-w-none">
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                A <strong>Monitorar Consultoria</strong> é uma empresa especializada em soluções 
-                ambientais e de segurança do trabalho, com 15 anos de sólida experiência no mercado. 
-                Nossa trajetória é marcada por um crescimento extraordinário, com um aumento de 8.000% 
-                em faturamento nos últimos 5 anos, o que nos levou à 33ª colocação no ranking da 
-                revista Exame.
+                Buscamos maximizar a colaboração e a captura de sinergias entre meio ambiente e segurança do trabalho, assegurando a visão integrada em nossas ações e decisões, gerando valor para nossos clientes, com foco em cultura de segurança e gestão de recursos. Valorizamos e reconhecemos, de forma diferenciada, pessoas e equipes com alto desempenho.
               </p>
-              
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                Atendemos mais de 100 clientes em diversos segmentos industriais, oferecendo 
-                serviços especializados em <strong>qualidade do ar</strong>, <strong>áreas impactadas</strong>, 
-                <strong>avaliação de ruído</strong>, <strong>licenciamento ambiental</strong>, 
-                <strong>gestão de SMS</strong>, <strong>HAZOP</strong>, <strong>higiene ocupacional</strong> 
-                e <strong>treinamentos</strong>.
+                Cultivamos a superação de desafios e buscamos incessantemente a geração e implementação de soluções tecnológicas e de negócios inovadores que contribuam para o alcance dos objetivos estratégicos da Monitorar.
               </p>
-
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                Nossa equipe técnica altamente qualificada trabalha com metodologias reconhecidas 
-                internacionalmente, garantindo que nossos clientes mantenham os mais altos padrões 
-                de segurança e sustentabilidade em suas operações.
+                Respeitando a vida em todas as suas formas, com excelência nas questões de saúde, segurança e meio ambiente. Fazemos das pessoas e de seu desenvolvimento um diferencial de desempenho da Monitorar.
               </p>
-
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Como representantes oficiais da <strong>Dräger</strong> no Brasil, oferecemos 
-                também equipamentos de última geração para detecção de gases e proteção individual, 
-                complementando nossa oferta de serviços com as melhores soluções tecnológicas 
-                disponíveis no mercado.
+                Nós nos orgulhamos de pertencer a uma empresa brasileira que foi construída para fazer a diferença onde quer que atue, por suas conquistas e por sua capacidade de vencer desafios.
               </p>
             </CardContent>
           </Card>
@@ -96,11 +80,11 @@ export default function About() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-secondary mb-2">15</div>
+              <div className="text-4xl font-bold text-secondary mb-2">16</div>
               <div className="text-muted-foreground">Anos de experiência</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-secondary mb-2">8.000%</div>
+              <div className="text-4xl font-bold text-secondary mb-2">800%</div>
               <div className="text-muted-foreground">Crescimento em faturamento</div>
             </div>
             <div>

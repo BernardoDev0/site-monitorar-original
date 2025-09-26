@@ -38,7 +38,7 @@ export default function Clients() {
           </Card>
           <Card className="card-service text-center">
             <CardContent className="p-8">
-              <div className="text-4xl font-bold text-secondary mb-2">15</div>
+              <div className="text-4xl font-bold text-secondary mb-2">16</div>
               <div className="text-muted-foreground">Anos de Experiência</div>
             </CardContent>
           </Card>

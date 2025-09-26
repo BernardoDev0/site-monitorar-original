@@ -5,29 +5,29 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "João Silva",
-    position: "Gerente de SMS",
-    company: "Petróleo Brasileiro S.A.",
+    name: "Washington Conceição",
+    position: "CEO | Sócio Fundador",
+    company: "ECOLOGIKA Gestão de Resíduos",
     rating: 5,
-    content: "A Monitorar Consultoria tem sido fundamental para mantermos nossos padrões de segurança em conformidade com as normas mais rigorosas. Sua equipe técnica demonstra profundo conhecimento e comprometimento com a excelência. Recomendo seus serviços sem hesitação.",
+    content: "A MONITORAR CONSULTORIA tem sido uma excelente parceira para a ECOLOGIKA. Os serviços técnicos solicitados são do mais alto comprometimento e qualidade. Uma das qualidades que eu mais admiro é o serviço personalizado que executa.",
     avatar: "/api/placeholder/60/60"
   },
   {
     id: 2,
-    name: "Maria Santos",
-    position: "Coordenadora Ambiental",
-    company: "Vale S.A.",
+    name: "Bruno Rosa",
+    position: "Eng. Ambiental e Segurança do Trabalho",
+    company: "DRATEC Engenharia",
     rating: 5,
-    content: "Trabalhar com a Monitorar foi uma experiência excepcional. Eles nos ajudaram a implementar um sistema de gestão ambiental robusto e eficiente. O profissionalismo e a dedicação da equipe superaram nossas expectativas. Parceria estratégica para nossa empresa.",
+    content: "Equipe da Monitorar sempre nos atende com excelência, realizando um ótimo trabalho. Empresa muito especializada nos serviços de monitoramento ambiental.",
     avatar: "/api/placeholder/60/60"
   },
   {
     id: 3,
-    name: "Carlos Oliveira",
-    position: "Diretor de Operações",
-    company: "CSN - Companhia Siderúrgica Nacional",
+    name: "Amanda Ouverney",
+    position: "Eng. Ambiental e Segurança do Trabalho",
+    company: "Biogênese Engenharia",
     rating: 5,
-    content: "A consultoria da Monitorar foi decisiva para otimizarmos nossos processos de segurança do trabalho. Eles trouxeram soluções inovadoras e práticas que resultaram em uma redução significativa dos nossos indicadores de acidentes. Equipe altamente qualificada e confiável.",
+    content: "Qualidade e compromisso são dois valores fundamentais que fazem a parceria com a MONITORAR CONSULTORIA ser de tanto sucesso. Juntos, conseguimos elevar os padrões de segurança de processos industriais, entregando valor aos nossos clientes.",
     avatar: "/api/placeholder/60/60"
   }
 ];
@@ -112,11 +112,11 @@ export default function Testimonials() {
               <div className="opacity-90">Projetos Entregues</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-success mb-2">15</div>
+              <div className="text-4xl font-bold text-success mb-2">16</div>
               <div className="opacity-90">Anos de Mercado</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-success mb-2">8.000%</div>
+              <div className="text-4xl font-bold text-success mb-2">800%</div>
               <div className="opacity-90">Crescimento</div>
             </div>
           </div>

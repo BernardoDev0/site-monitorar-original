@@ -52,7 +52,7 @@
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(218 34% 22%), hsl(218 34% 30%));
     --gradient-secondary: linear-gradient(135deg, hsl(86 85% 31%), hsl(85 92% 39%));
-    --gradient-hero: linear-gradient(135deg, hsl(218 34% 22% / 0.9), hsl(218 34% 15% / 0.95));
+    --gradient-hero: linear-gradient(135deg, hsl(218 34% 22% / 0.7), hsl(218 34% 15% / 0.8));
 
     /* Shadows */
     --shadow-elegant: 0 10px 30px -10px hsl(218 34% 22% / 0.2);
