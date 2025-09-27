@@ -25,9 +25,20 @@ export const Header = () => {
 
   return (
     <header className="bg-white shadow-sm relative z-50">
-      {/* Top bar with contact info */}
-      <div className="bg-primary text-primary-foreground py-2">
-        <div className="container mx-auto px-4 flex justify-end space-x-6 text-sm">
+      {/* Top bar with contact info and wave animation */}
+      <div className="bg-primary text-primary-foreground py-2 relative overflow-hidden rounded-b-2xl">
+        {/* Wave animation background */}
+        <div 
+          className="absolute inset-0 opacity-30 animate-pulse"
+          style={{
+            background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%)',
+            animation: 'waveSlide 2s linear infinite',
+            transform: 'translateX(-100%)',
+            width: '200%'
+          }}
+        ></div>
+        
+        <div className="container mx-auto px-4 flex justify-end space-x-6 text-sm relative z-10">
           <div className="flex items-center space-x-2">
             <Phone className="h-4 w-4" />
             <span>(21) 3881-1212</span>

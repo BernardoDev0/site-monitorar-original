@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes waveSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
 /* Monitorar Consultoria Design System 
    Brand Colors: Azul escuro (#24304c), Verde 01 (#3f9905), Verde 02 (#4fc106), Verde 03 (#90ed18)
    Typography: DM Sans

@@ -2,56 +2,81 @@ import { Button } from "@/components/ui/button";
 import { AnimatedText } from "@/components/AnimatedText";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Leaf, Shield, Award, CheckCircle } from "lucide-react";
+import { ServiceCard } from "@/components/ServiceCard";
+import { ServiceCardWithIcon } from "@/components/ServiceCardWithIcon";
+import { 
+  Leaf, 
+  Shield, 
+  Award, 
+  CheckCircle,
+  Wind,
+  MapPin,
+  Volume2,
+  FileText,
+  Users,
+  AlertTriangle,
+  HardHat,
+  Search,
+  GraduationCap
+} from "lucide-react";
 
 const environmentalServices = [
   {
     title: "Qualidade do Ar",
+    icon: Wind,
     description: "Monitoramento e avaliação da qualidade do ar em ambientes industriais e urbanos.",
-    items: ["LDAR (Leak Detection and Repair)", "PTS (Partículas Totais em Suspensão)", "Procon Fumaça Preta"]
+    fullDescription: "Desenvolvemos soluções sustentáveis para proteger e melhorar o meio ambiente através de auditoria e certificação ambiental, qualidade do ar, avaliação geoambiental, monitoramento de efluentes e licenciamento. Nossos métodos reconhecidos garantem conformidade com as normas ambientais e proteção da saúde pública. Incluímos serviços de LDAR (Leak Detection and Repair), monitoramento de PTS (Partículas Totais em Suspensão), PROCON Fumaça Preta e outras avaliações essenciais para a gestão da qualidade do ar."
   },
   {
     title: "Áreas Impactadas",
+    icon: MapPin, 
     description: "Investigação e remediação de áreas contaminadas conforme legislação ambiental.",
-    items: ["Investigação Confirmatória", "Investigação Detalhada", "Análise de Risco", "Plano de Remediação"]
+    fullDescription: "Processo essencial para entender condições de solo e água: coleta e análise de amostras, identificação de contaminantes e compreensão das características geológicas. Fundamenta planos de mitigação, remediação e prevenção de danos. Também protege a saúde pública e viabiliza uso sustentável do solo e da água. Realizamos investigação confirmatória, investigação detalhada, análise de risco e planos de remediação completos."
   },
   {
     title: "Avaliação de Ruído Extramuros",
+    icon: Volume2,
     description: "Medição e análise de ruído para atendimento às normas ambientais.",
-    items: ["Medições Acústicas", "Relatórios Técnicos", "Adequação às Normas", "Monitoramento Contínuo"]
+    fullDescription: "Monitoramento e análise do nível de ruído que ultrapassa os limites de uma instalação, avaliando impacto em áreas adjacentes e conformidade com normas. Utilizamos monitoramento contínuo ou pontual com sonômetros, modelagem acústica através de softwares especializados e análise estatística completa. Nossos serviços incluem medições acústicas, relatórios técnicos detalhados, adequação às normas e monitoramento contínuo."
   },
   {
     title: "Licenciamento Ambiental",
+    icon: FileText,
     description: "Assessoria completa para obtenção de licenças ambientais.",
-    items: ["Licença Prévia", "Licença de Instalação", "Licença de Operação", "Renovações"]
+    fullDescription: "Realizamos o licenciamento junto aos órgãos ambientais, avaliando a viabilidade ambiental de empreendimentos e atividades para controle preventivo, proteção do meio ambiente, garantia do desenvolvimento sustentável e cumprimento legal. Oferecemos Licença Prévia (LP), Licença de Instalação (LI), Licença de Operação (LO) e renovações. Nosso processo inclui requerimento e análise técnica, consulta pública e decisão, monitoramento e fiscalização contínua."
   }
 ];
 
 const safetyServices = [
   {
     title: "Gestão de SMS",
+    icon: Users,
     description: "Implantação e gestão de sistemas de Segurança, Meio Ambiente e Saúde.",
-    items: ["Política SMS", "Procedimentos", "Indicadores", "Auditoria Interna"]
+    fullDescription: "Fiscalização da documentação legal de segurança do trabalho para indústrias: essencial para proteger a saúde e integridade dos trabalhadores, prevenir acidentes e garantir conformidade. Incluímos planejamento da fiscalização, identificação dos documentos necessários, visita técnica à instalação, verificação de conformidade e coerência, orientação, educação e relatórios, acompanhamento e reavaliação. Desenvolvemos política SMS, procedimentos, indicadores e auditoria interna."
   },
   {
     title: "HAZOP",
+    icon: AlertTriangle,
     description: "Análise de Operabilidade e Perigos (Hazard and Operability Study).",
-    items: ["Identificação de Perigos", "Análise de Riscos", "Relatório HAZOP", "Plano de Ação"]
+    fullDescription: "Análise sistemática e estruturada para identificar perigos potenciais e problemas de operabilidade em processos industriais. Utilizamos metodologia reconhecida internacionalmente para análise de riscos, identificação de cenários de falha, avaliação de consequências e desenvolvimento de medidas preventivas. Nossos serviços incluem identificação de perigos, análise de riscos detalhada, relatório HAZOP completo e plano de ação para mitigação de riscos."
   },
   {
     title: "Higiene Ocupacional",
+    icon: HardHat,
     description: "Avaliação e controle de agentes ambientais nos locais de trabalho.",
-    items: ["PPRA", "PCMSO", "LTCAT", "Avaliação de Agentes"]
+    fullDescription: "Serviços para identificar, avaliar, controlar e gerenciar riscos à saúde e segurança no ambiente de trabalho. Realizamos avaliação de riscos ambientais, medição de ruído, poeiras e fumos, gases e vapores, agentes biológicos. Desenvolvemos programas e procedimentos (PPHO), implementação e controle, treinamentos e capacitações, monitoramento e auditoria contínua. Benefícios incluem redução de riscos e prevenção de doenças ocupacionais, conformidade legal, melhoria de produtividade e redução de custos, fortalecimento da cultura de segurança."
   },
   {
     title: "Auditorias",
+    icon: Search,
     description: "Auditorias em sistemas de gestão e conformidade legal.",
-    items: ["Auditoria Legal", "Sistema de Gestão", "Conformidade", "Relatórios"]
+    fullDescription: "Auditorias especializadas em sistemas de gestão e conformidade legal para garantir que sua empresa atenda aos mais altos padrões de segurança, meio ambiente e saúde ocupacional. Nossos serviços incluem auditoria legal completa, avaliação de sistema de gestão, verificação de conformidade com normas e regulamentações, e elaboração de relatórios detalhados com recomendações de melhoria."
   },
   {
     title: "Treinamentos",
+    icon: GraduationCap,
     description: "Capacitação técnica especializada para equipes operacionais.",
-    items: ["NR-33", "NR-35", "Espaços Confinados", "Trabalho em Altura"]
+    fullDescription: "Capacitação técnica especializada para equipes operacionais com foco em segurança do trabalho. Oferecemos treinamentos em NR-33 (Espaços Confinados), NR-35 (Trabalho em Altura), e outras normas regulamentadoras. Nossos programas incluem treinamentos práticos, simulações de situações de risco, capacitação em uso de equipamentos de proteção individual e coletiva, e desenvolvimento de competências para identificação e prevenção de acidentes."
   }
 ];
 
@@ -60,279 +85,89 @@ export default function Services() {
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <AnimatedText as="h1" className="section-title" text="Nossos Serviços" />
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Soluções completas em segurança do trabalho, saúde ocupacional e meio ambiente
           </p>
         </div>
 
         {/* Environmental Services */}
-        <section className="mb-20">
-          <div className="flex items-center mb-12">
-            <div className="p-3 bg-gradient-to-r from-secondary to-accent rounded-full mr-4">
-              <Leaf className="h-8 w-8 text-white" />
+        <section className="mb-16">
+          <div className="flex items-center mb-8">
+            <div className="p-2 bg-gradient-to-r from-secondary to-accent rounded-full mr-3">
+              <Leaf className="h-6 w-6 text-white" />
             </div>
-            <h2 className="text-3xl font-bold text-primary">Meio Ambiente</h2>
+            <h2 className="text-2xl font-bold text-primary">Meio Ambiente</h2>
           </div>
 
-          <p className="text-lg text-muted-foreground max-w-4xl mb-10">
+          <p className="text-base text-muted-foreground max-w-3xl mb-8">
             Ajudamos empresas a cumprir regulamentos ambientais, reduzir impactos negativos e promover a
             sustentabilidade, com planos de ação e práticas corretas.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {environmentalServices.map((service, index) => (
-              <Card key={index} className="card-service">
-                <CardHeader>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
-                  <div className="space-y-2 mb-6">
-                    {service.items.map((item, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-success" />
-                        <span className="text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Button variant="outline" className="w-full">
-                    Fale com um Consultor
-                  </Button>
-                </CardContent>
-              </Card>
+              <ServiceCardWithIcon
+                key={service.title}
+                title={service.title}
+                icon={service.icon}
+                description={service.description}
+                fullDescription={service.fullDescription}
+                delayMs={index * 100}
+              />
             ))}
           </div>
 
-          {/* Detalhamento Meio Ambiente */}
-          <div className="mt-14 space-y-10">
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Qualidade do Ar</h3>
-              <div className="space-y-6 text-muted-foreground">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Emissões fugitivas (LDAR)</h4>
-                  <p>
-                    O programa LDAR (Leak Detection and Repair) e SMART LDAR é um sistema focado na
-                    detecção e reparo de vazamentos em indústrias que lidam com gases e líquidos, utilizando
-                    tecnologias avançadas e equipamentos como câmeras (OGI) e analisadores (TVA, PHOCHECK)
-                    para identificar vazamentos de compostos orgânicos voláteis (VOCs) e outros poluentes.
-                    A detecção precoce é crucial para minimizar a emissão de poluentes.
-                  </p>
-                  <p>
-                    Este processo também ajuda a evitar perdas financeiras, multas regulatórias e promove
-                    maior eficiência da planta, redução de custos com matéria-prima e seguros de sinistro
-                    industrial, resultando em operações mais sustentáveis e confiáveis.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Monitoramento de PTS (Partículas Totais em Suspensão)</h4>
-                  <p>
-                    Medição da concentração de partículas sólidas e líquidas em suspensão no ar ambiente.
-                    Essencial para a gestão da qualidade do ar, fiscalizado por INEA e demais órgãos.
-                  </p>
-                  <p>
-                    Métodos de monitoramento: Gravimetria, Monitores contínuos de PTS, análise química e de
-                    tamanho de partículas.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">PROCON Fumaça Preta - INEA</h4>
-                  <p>
-                    Medição para monitorar e controlar a emissão de fumaça preta em veículos ciclo diesel,
-                    exigida pelo CONAMA. A iniciativa é crucial para a melhoria da qualidade do ar e proteção
-                    da saúde pública, além de educar e incentivar práticas que resultem em um ambiente mais
-                    saudável.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Áreas Impactadas</h3>
-              <h4 className="font-semibold text-foreground mb-2">Avaliação Geoambiental</h4>
-              <p className="text-muted-foreground">
-                Processo essencial para entender condições de solo e água: coleta e análise de amostras,
-                identificação de contaminantes e compreensão das características geológicas. Fundamenta
-                planos de mitigação, remediação e prevenção de danos. Também protege a saúde pública e
-                viabiliza uso sustentável do solo e da água.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Avaliação de Ruído Extramuros</h3>
-              <p className="text-muted-foreground mb-2">
-                Monitoramento e análise do nível de ruído que ultrapassa os limites de uma instalação,
-                avaliando impacto em áreas adjacentes e conformidade com normas.
-              </p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Monitoramento contínuo ou pontual (sonômetros)</li>
-                <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Modelagem acústica (softwares)</li>
-                <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Análise estatística</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Licenciamento</h3>
-              <p className="text-muted-foreground mb-4">
-                Realizamos o licenciamento junto aos órgãos ambientais, avaliando a viabilidade ambiental de
-                empreendimentos e atividades para controle preventivo, proteção do meio ambiente, garantia do
-                desenvolvimento sustentável e cumprimento legal.
-              </p>
-              <div className="grid md:grid-cols-2 gap-6 text-muted-foreground">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Tipos de Licenças</h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Licença Prévia (LP)</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Licença de Instalação (LI)</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Licença de Operação (LO)</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Procedimento</h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Requerimento e análise técnica</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Consulta pública e decisão</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Monitoramento e fiscalização</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Safety Services */}
-        <section className="mb-20">
-          <div className="flex items-center mb-12">
-            <div className="p-3 bg-gradient-to-r from-secondary to-accent rounded-full mr-4">
-              <Shield className="h-8 w-8 text-white" />
+        <section className="mb-16">
+          <div className="flex items-center mb-8">
+            <div className="p-2 bg-gradient-to-r from-secondary to-accent rounded-full mr-3">
+              <Shield className="h-6 w-6 text-white" />
             </div>
-            <h2 className="text-3xl font-bold text-primary">Segurança do Trabalho</h2>
+            <h2 className="text-2xl font-bold text-primary">Segurança do Trabalho</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {safetyServices.map((service, index) => (
-              <Card key={index} className="card-service">
-                <CardHeader>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
-                  <div className="space-y-2 mb-6">
-                    {service.items.map((item, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-success" />
-                        <span className="text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Button variant="outline" className="w-full">
-                    Fale com um Consultor
-                  </Button>
-                </CardContent>
-              </Card>
+              <ServiceCardWithIcon
+                key={service.title}
+                title={service.title}
+                icon={service.icon}
+                description={service.description}
+                fullDescription={service.fullDescription}
+                delayMs={index * 100}
+              />
             ))}
           </div>
 
-          {/* Detalhamento Segurança do Trabalho */}
-          <div className="mt-14 space-y-10">
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Gestão de SMS</h3>
-              <p className="text-muted-foreground mb-4">
-                Fiscalização da documentação legal de segurança do trabalho para indústrias: essencial
-                para proteger a saúde e integridade dos trabalhadores, prevenir acidentes e garantir
-                conformidade.
-              </p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Planejamento da fiscalização</li>
-                <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Identificação dos documentos necessários</li>
-                <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Visita técnica à instalação</li>
-                <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Verificação de conformidade e coerência</li>
-                <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Orientação, educação e relatórios</li>
-                <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Acompanhamento e reavaliação</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Higiene Ocupacional</h3>
-              <p className="text-muted-foreground mb-4">
-                Serviços para identificar, avaliar, controlar e gerenciar riscos à saúde e segurança no
-                ambiente de trabalho.
-              </p>
-              <div className="grid md:grid-cols-2 gap-6 text-muted-foreground">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Serviços</h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Avaliação de riscos ambientais</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Medição de ruído; poeiras e fumos; gases e vapores; agentes biológicos</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Programas e procedimentos (PPHO), implementação e controle</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Treinamentos e capacitações</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Monitoramento e auditoria contínua</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Benefícios</h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Redução de riscos e prevenção de doenças ocupacionais</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Conformidade legal</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Melhoria de produtividade e redução de custos</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Fortalecimento da cultura de segurança</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Avaliações Ocupacionais</h3>
-              <p className="text-muted-foreground mb-4">
-                Identificação de riscos, prevenção de doenças ocupacionais e acidentes, conformidade com a
-                legislação e promoção de saúde e bem-estar.
-              </p>
-              <div className="grid md:grid-cols-2 gap-6 text-muted-foreground">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Tipos de Avaliações</h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Riscos ambientais: físicos, químicos e biológicos</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Ergonômica e psicossocial</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Segurança e saúde ocupacional (exames e biomonitoramento)</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Como são realizadas</h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Coleta de dados e inspeções no local de trabalho</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Análise e avaliação de riscos</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-success mt-0.5" />Recomendações, medidas de controle e monitoramento contínuo</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Drager Representation */}
-        <section className="bg-muted/30 rounded-2xl p-8 md:p-12">
-          <div className="flex items-center justify-center mb-8">
-            <div className="p-3 bg-gradient-to-r from-secondary to-accent rounded-full mr-4">
-              <Award className="h-8 w-8 text-white" />
+        <section className="bg-muted/30 rounded-2xl p-6 md:p-8">
+          <div className="flex items-center justify-center mb-6">
+            <div className="p-2 bg-gradient-to-r from-secondary to-accent rounded-full mr-3">
+              <Award className="h-6 w-6 text-white" />
             </div>
-            <h2 className="text-3xl font-bold text-primary">Representação Dräger</h2>
+            <h2 className="text-2xl font-bold text-primary">Representação Dräger</h2>
           </div>
 
-          <div className="text-center max-w-3xl mx-auto">
-            <p className="text-lg text-muted-foreground mb-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground mb-6">
               Como representantes oficiais da Dräger no Brasil, oferecemos equipamentos 
               de última geração para detecção de gases e proteção individual.
             </p>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <Badge variant="outline" className="py-2 px-4">Detectores de Gases</Badge>
-              <Badge variant="outline" className="py-2 px-4">Equipamentos de Proteção</Badge>
-              <Badge variant="outline" className="py-2 px-4">Calibração</Badge>
-              <Badge variant="outline" className="py-2 px-4">Manutenção</Badge>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+              <Badge variant="outline" className="py-1 px-3 text-sm">Detectores de Gases</Badge>
+              <Badge variant="outline" className="py-1 px-3 text-sm">Equipamentos de Proteção</Badge>
+              <Badge variant="outline" className="py-1 px-3 text-sm">Calibração</Badge>
+              <Badge variant="outline" className="py-1 px-3 text-sm">Manutenção</Badge>
             </div>
 
-            <Button className="btn-hero">
+            <Button className="btn-hero text-sm px-6 py-2">
               Conheça os Equipamentos Dräger
             </Button>
           </div>
