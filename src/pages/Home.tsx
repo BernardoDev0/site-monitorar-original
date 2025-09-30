@@ -174,7 +174,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Industrial Safety Card */}
-            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20">
+            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20 h-full flex flex-col">
               <div 
                 className="h-48 bg-cover bg-center relative overflow-hidden"
                 style={{
@@ -188,14 +188,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Segurança Industrial</h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed flex-grow">
                   Proteção de trabalhadores e instalações industriais com tecnologias avançadas e procedimentos rigorosos.
                 </p>
                 <Button 
                   variant="secondary" 
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white mt-auto"
                 >
                   Conheça nossos serviços
                 </Button>
@@ -203,7 +203,7 @@ export default function Home() {
             </Card>
 
             {/* Environmental Consulting Card */}
-            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20">
+            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20 h-full flex flex-col">
               <div 
                 className="h-48 bg-cover bg-center relative overflow-hidden"
                 style={{
@@ -217,14 +217,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Consultoria Ambiental</h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed flex-grow">
                   Consultoria completa para projetos sustentáveis, incluindo licenciamento ambiental e conformidade regulatória.
                 </p>
                 <Button 
                   variant="secondary" 
-                  className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto"
                 >
                   Conheça nossos serviços
                 </Button>
@@ -232,11 +232,11 @@ export default function Home() {
             </Card>
 
             {/* Environmental Restoration Card */}
-            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20">
+            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20 h-full flex flex-col">
               <div 
                 className="h-48 bg-cover bg-center relative overflow-hidden"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1574263867128-a3d5c1b1deae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90')`
+                  backgroundImage: `url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90')`
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/80 to-transparent" />
@@ -246,14 +246,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Reflorestamento</h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed flex-grow">
                   Recuperação de áreas degradadas e preservação de vegetação nativa, restauração de ecossistemas.
                 </p>
                 <Button 
                   variant="secondary" 
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white mt-auto"
                 >
                   Conheça nossos serviços
                 </Button>
@@ -261,7 +261,7 @@ export default function Home() {
             </Card>
 
             {/* Urban Studies Card */}
-            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20">
+            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20 h-full flex flex-col">
               <div 
                 className="h-48 bg-cover bg-center relative overflow-hidden"
                 style={{
@@ -275,14 +275,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Estudos Urbanos</h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed flex-grow">
                   Avaliação do impacto ambiental de projetos em áreas urbanas, mobilidade e infraestrutura sustentável.
                 </p>
                 <Button 
                   variant="secondary" 
-                  className="w-full bg-gray-600 hover:bg-gray-700 text-white"
+                  className="w-full bg-gray-600 hover:bg-gray-700 text-white mt-auto"
                 >
                   Conheça nossos serviços
                 </Button>
@@ -290,11 +290,11 @@ export default function Home() {
             </Card>
 
             {/* Water Treatment Card */}
-            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20">
+            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20 h-full flex flex-col">
               <div 
                 className="h-48 bg-cover bg-center relative overflow-hidden"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1569163139394-de4e4f43e4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90')`
+                  backgroundImage: `url('https://images.unsplash.com/photo-1581594549595-35f6edc7b762?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90')`
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/80 to-transparent" />
@@ -304,14 +304,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Tratamento de Efluentes</h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed flex-grow">
                   Soluções para tratamento de águas residuais industriais e monitoramento de qualidade ambiental.
                 </p>
                 <Button 
                   variant="secondary" 
-                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white"
+                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white mt-auto"
                 >
                   Conheça nossos serviços
                 </Button>
@@ -319,7 +319,7 @@ export default function Home() {
             </Card>
 
             {/* Energy Solutions Card */}
-            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20">
+            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20 h-full flex flex-col">
               <div 
                 className="h-48 bg-cover bg-center relative overflow-hidden"
                 style={{
@@ -333,14 +333,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Energia Sustentável</h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed flex-grow">
                   Consultoria em energia renovável e eficiência energética para indústrias e refinarias.
                 </p>
                 <Button 
                   variant="secondary" 
-                  className="w-full bg-orange-600 hover:bg-orange-700 text-white"
+                  className="w-full bg-orange-600 hover:bg-orange-700 text-white mt-auto"
                 >
                   Conheça nossos serviços
                 </Button>
