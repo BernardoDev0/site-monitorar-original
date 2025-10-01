@@ -20,12 +20,9 @@ const navigationItems = [
     name: "Serviços", 
     href: "/servicos",
     dropdown: [
-      { name: "Segurança do Trabalho", href: "/servicos/seguranca" },
-      { name: "HAZOP", href: "/servicos/hazop" },
-      { name: "Higiene Ocupacional", href: "/servicos/higiene" },
-      { name: "Auditorias", href: "/servicos/auditorias" },
-      { name: "Treinamentos", href: "/servicos/treinamentos" },
-      { name: "Meio Ambiente", href: "/servicos/meio-ambiente" }
+      { name: "Segurança do trabalho", href: "/servicos/seguranca" },
+      { name: "Meio ambiente", href: "/servicos/meio-ambiente" },
+      { name: "Representação Drager", href: "/servicos" }
     ]
   },
   { name: "Nossos Clientes", href: "/clientes" },

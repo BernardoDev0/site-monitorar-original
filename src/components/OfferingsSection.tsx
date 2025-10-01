@@ -6,10 +6,10 @@ const imgEM = "/pessoas/Picture14.jpg";
 
 const services = [
   {
-    title: "Qualidade do Ar",
+    title: "Monitoramento Ambiental",
     image: imgEM,
-    description: "Inventário de Qualidade do Ar e emissões atmosféricas com métodos reconhecidos.",
-    fullDescription: "Desenvolvemos soluções sustentáveis para proteger e melhorar o meio ambiente através de auditoria e certificação ambiental, qualidade do ar, avaliação geoambiental, monitoramento de efluentes e licenciamento. Nossos métodos reconhecidos garantem conformidade com as normas ambientais e proteção da saúde pública."
+    description: "Medição e análise de poluição sonora extramuros para atendimento às normas.",
+    fullDescription: "Executamos monitoramento ambiental de ruído em áreas externas às instalações (extramuros), avaliando a poluição sonora e seu impacto em vizinhanças. Utilizamos sonômetros calibrados, campanhas pontuais ou contínuas, elaboração de mapas/curvas acústicas e emitimos relatórios técnicos para comprovar conformidade com normas aplicáveis (ex.: ABNT NBR 10151)."
   },
   {
     title: "LDAR",

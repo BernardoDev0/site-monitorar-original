@@ -15,6 +15,7 @@ import {
   Wrench,
   HardHat,
   Flame,
+  FileText,
   CheckCircle
 } from "lucide-react";
 import heroImage from "@/assets/hero-refinery.jpg";
@@ -45,8 +46,8 @@ const services = [
   {
     icon: Shield,
     title: "Segurança do Trabalho",
-    description: "Consultoria em segurança do trabalho, planejamento e implementação de programas de segurança, elaboração de programas e laudos técnicos, treinamentos, higiene e saúde ocupacional, gestão de SMS.",
-    items: ["Gestão de SMS", "HAZOP", "Higiene Ocupacional", "Auditorias", "Treinamentos"]
+    description: "Consultoria em segurança do trabalho, planejamento e implementação de programas de segurança, elaboração de programas e laudos técnicos, treinamentos e gestão de SMS.",
+    items: ["Gestão de SMS", "HAZOP", "Auditorias", "Treinamentos"]
   },
   {
     icon: Award,
@@ -207,7 +208,7 @@ export default function Home() {
               <div 
                 className="h-48 bg-cover bg-center relative overflow-hidden"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90')`
+                  backgroundImage: `url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90')`
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/80 to-transparent" />
@@ -236,7 +237,7 @@ export default function Home() {
               <div 
                 className="h-48 bg-cover bg-center relative overflow-hidden"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90')`
+                  backgroundImage: `url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90')`
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/80 to-transparent" />
@@ -318,29 +319,29 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Energy Solutions Card */}
+            {/* Licensing Card (replacing Energy Solutions) */}
             <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/20 h-full flex flex-col">
               <div 
                 className="h-48 bg-cover bg-center relative overflow-hidden"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90')`
+                  backgroundImage: `url('/servicos/licenciamento.jpg')`
                 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-orange-900/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-900/80 to-transparent" />
                 <div className="absolute bottom-4 left-4">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                    <Flame className="w-6 h-6 text-white" />
+                    <FileText className="w-6 h-6 text-white" />
                   </div>
                 </div>
               </div>
               <CardContent className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Energia Sustentável</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Licenciamento Ambiental</h3>
                 <p className="text-muted-foreground mb-4 text-sm leading-relaxed flex-grow">
-                  Consultoria em energia renovável e eficiência energética para indústrias e refinarias.
+                  Assessoria completa para licenciamento ambiental (LP, LI, LO), renovações e conformidade regulatória.
                 </p>
                 <Button 
                   variant="secondary" 
-                  className="w-full bg-orange-600 hover:bg-orange-700 text-white mt-auto"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto"
                 >
                   Conheça nossos serviços
                 </Button>

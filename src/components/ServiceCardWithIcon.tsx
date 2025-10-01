@@ -11,9 +11,10 @@ interface ServiceCardWithIconProps {
   description: string;
   fullDescription: string;
   delayMs?: number;
+  imageSrc?: string;
 }
 
-const ServiceCardWithIconComponent = ({ title, icon: Icon, description, fullDescription, delayMs = 0 }: ServiceCardWithIconProps) => {
+const ServiceCardWithIconComponent = ({ title, icon: Icon, description, fullDescription, imageSrc, delayMs = 0 }: ServiceCardWithIconProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleExpand = useCallback(() => {
@@ -32,13 +33,25 @@ const ServiceCardWithIconComponent = ({ title, icon: Icon, description, fullDesc
     <>
       <Reveal delayMs={delayMs}>
         <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col group" style={{ willChange: 'box-shadow' }}>
-          <div className="h-48 md:h-52 flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
-            <div className="p-6 bg-gradient-to-r from-primary to-secondary rounded-full">
-              <Icon className="h-12 w-12 text-white" />
-            </div>
+          <div className="h-48 md:h-52 relative">
+            {imageSrc ? (
+              <>
+                <img src={imageSrc} alt={title} className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent" />
+                <div className="absolute bottom-3 left-3 p-3 bg-gradient-to-r from-primary to-secondary rounded-full shadow-md">
+                  <Icon className="h-6 w-6 text-white" />
+                </div>
+              </>
+            ) : (
+              <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
+                <div className="p-6 bg-gradient-to-r from-primary to-secondary rounded-full">
+                  <Icon className="h-12 w-12 text-white" />
+                </div>
+              </div>
+            )}
           </div>
           <CardContent className="p-6 text-center flex flex-col h-full">
-            <h3 className="text-xl font-bold text-primary mb-1image.png">{title}</h3>
+            <h3 className="text-xl font-bold text-primary mb-1">{title}</h3>
             <p className="text-muted-foreground mb-2 leading-relaxed text-sm flex-grow">{description}</p>
             <Button 
               onClick={handleExpand}

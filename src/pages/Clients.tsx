@@ -1,61 +1,62 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building2, Factory, Zap, Waves, Hammer, Truck } from "lucide-react";
+// Imagem de fundo com refinaria e floresta
+import industrialBg from "@/assets/refinary+floresta.png";
 
 // Clientes reais da Monitorar (usando imagens da pasta /public/clientes/)
 const clients = [
-  { 
-    name: "Petrobras", 
+  {  
     logo: "/clientes/petrobras.png",
     sector: "Petroquímica"
   },
   { 
-    name: "Ipiranga", 
+    name: "", 
     logo: "/clientes/ipiranga.png",
     sector: "Combustíveis"
   },
   { 
-    name: "CSN", 
+    name: "", 
     logo: "/clientes/csn.png",
     sector: "Siderurgia"
   },
   { 
-    name: "Transpetro", 
+    name: "", 
     logo: "/clientes/transpetro.png",
     sector: "Logística"
   },
   { 
-    name: "FIRJAN", 
+    name: "", 
     logo: "/clientes/firjan.png",
     sector: "Industrial"
   },
   { 
-    name: "Dräger", 
+    name: "", 
     logo: "/clientes/drager.png",
     sector: "Equipamentos"
   },
   { 
-    name: "Ream", 
+    name: "", 
     logo: "/clientes/ream.png",
     sector: "Industrial"
   },
   { 
-    name: "Ingersoll Rand", 
+    name: "", 
     logo: "/clientes/rand.png",
     sector: "Equipamentos"
   },
   { 
-    name: "Iconic", 
+    name: "", 
     logo: "/clientes/iconic.png",
     sector: "Lubrificantes"
   },
   { 
-    name: "Lubrizol", 
+    name: "", 
     logo: "/clientes/lubrizol.png",
     sector: "Químicos"
   },
   { 
-    name: "Nitriflex", 
+    name: "", 
     logo: "/clientes/nitriflex.png",
     sector: "Borrachas"
   },
@@ -133,111 +134,105 @@ export default function Clients() {
       <div className="container mx-auto px-4">
 
 
-        {/* Client Logos - Super Moderno */}
-        <div className="mb-20">
-          <div className="text-center mb-16 relative">
+        {/* Hero Clientes (imagem sob o header) */}
+        <div className="mb-12 relative rounded-3xl overflow-hidden -mt-[80px] z-0">
+          {/* Background image FREE + overlays no mesmo estilo da página Sobre */}
+          <div className="absolute inset-0">
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+              style={{
+                backgroundImage: `url(${industrialBg})`,
+                filter: 'brightness(0.85) contrast(1.2) saturate(1.15)'
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/75 via-emerald-900/60 to-green-800/70" />
+            <div className="absolute inset-0 bg-black/40" />
+          </div>
+          <div className="text-center py-16 relative">
             {/* Decoração de fundo */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-64 h-64 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-3xl opacity-30" />
             </div>
             
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-secondary/10 px-6 py-2 rounded-full mb-6">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-6 border border-white/20">
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-primary">Nossos Clientes</span>
+                <span className="text-sm font-medium text-white">Nossos Clientes</span>
                 <div className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-md">
                 Empresas que Confiam em Nosso Trabalho
               </h2>
               
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Parceiros de renome que escolheram a <span className="font-semibold text-primary">Monitorar</span> para suas necessidades de 
-                <span className="font-semibold text-secondary"> segurança</span> e 
-                <span className="font-semibold text-accent"> meio ambiente</span>
+              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow">
+                Parceiros de renome que escolheram a <span className="font-semibold text-green-200">Monitorar</span> para suas necessidades de 
+                <span className="font-semibold text-green-200"> segurança</span> e 
+                <span className="font-semibold text-emerald-300"> meio ambiente</span>
               </p>
               
-              {/* Linha decorativa */}
+              {/* Linha decorativa (alto contraste) */}
               <div className="flex items-center justify-center mt-8">
-                <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent w-32" />
-                <div className="w-3 h-3 bg-gradient-to-r from-primary to-secondary rounded-full mx-4" />
-                <div className="h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent w-32" />
+                <div className="h-[2px] w-40 bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+                <div className="mx-4 w-3.5 h-3.5 rounded-full bg-white/90 shadow-[0_0_12px_rgba(255,255,255,0.8)] ring-2 ring-white/40" />
+                <div className="h-[2px] w-40 bg-gradient-to-l from-transparent via-white/80 to-transparent" />
               </div>
             </div>
           </div>
 
-          {/* Logos Grid - Super Moderno e Lindo */}
-          <div className="relative">
-            {/* Background decorativo */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 rounded-3xl" />
-            
-            <div className="relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
-              {clients.map((client, index) => (
-                <div
-                  key={index}
-                  className="group relative animate-slide-in-up"
-                  style={{
-                    animationDelay: `${index * 50}ms`
-                  }}
-                >
-                  {/* Card Principal */}
-                  <div className="client-card relative overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
-                    {/* Gradiente de fundo animado */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    
-                    <div className="relative z-10 aspect-[4/3] p-6 flex flex-col items-center justify-center">
-                      {/* Logo Container */}
-                      <div className="w-full h-16 flex items-center justify-center mb-3 relative">
-                        <img
-                          src={client.logo}
-                          alt={`Logo ${client.name}`}
-                          className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-200 will-change-transform"
-                          loading="lazy"
-                          decoding="async"
-                          onError={(e) => {
-                            const target = e.currentTarget as HTMLImageElement;
-                            target.style.display = 'none';
-                            const nextElement = target.nextElementSibling as HTMLElement;
-                            if (nextElement) nextElement.style.display = 'flex';
-                          }}
-                        />
-                        {/* Fallback limpo */}
-                        <div 
-                          className="hidden w-full h-full items-center justify-center text-base font-bold bg-gradient-to-br from-primary to-secondary text-white rounded-xl shadow-md"
-                          style={{ display: 'none' }}
-                        >
-                          <span className="text-center px-2">
-                            {client.name}
-                          </span>
-                        </div>
-                      </div>
-                      
-                      {/* Nome da empresa */}
-                      <h3 className="text-sm font-semibold text-gray-800 group-hover:text-primary transition-colors duration-200 text-center">
-                        {client.name}
-                      </h3>
-                      
-                      {/* Setor */}
-                      <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                        <Badge variant="outline" className="text-xs">
-                          {client.sector}
-                        </Badge>
+        </div>
+
+        {/* Logos Grid - abaixo do herói, SEM imagem de fundo */}
+        <div className="relative rounded-3xl">
+          <div className="relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+            {clients.map((client, index) => (
+              <div
+                key={index}
+                className="group relative animate-slide-in-up"
+                style={{
+                  animationDelay: `${index * 50}ms`
+                }}
+              >
+                <div className="client-card relative overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="relative z-10 aspect-[4/3] p-6 flex flex-col items-center justify-center">
+                    <div className="w-full h-16 flex items-center justify-center mb-3 relative">
+                      <img
+                        src={client.logo}
+                        alt={`Logo ${client.name}`}
+                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-200 will-change-transform"
+                        loading="lazy"
+                        decoding="async"
+                        onError={(e) => {
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.style.display = 'none';
+                          const nextElement = target.nextElementSibling as HTMLElement;
+                          if (nextElement) nextElement.style.display = 'flex';
+                        }}
+                      />
+                      <div 
+                        className="hidden w-full h-full items-center justify-center text-base font-bold bg-gradient-to-br from-primary to-secondary text-white rounded-xl shadow-md"
+                        style={{ display: 'none' }}
+                      >
+                        <span className="text-center px-2">
+                          {client.name}
+                        </span>
                       </div>
                     </div>
-                    
-                    {/* Indicador de hover */}
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                    <h3 className="text-sm font-semibold text-gray-800 group-hover:text-primary transition-colors duration-200 text-center">
+                      {client.name}
+                    </h3>
+                    <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      <Badge variant="outline" className="text-xs">
+                        {client.sector}
+                      </Badge>
+                    </div>
                   </div>
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 </div>
-              ))}
-            </div>
-            
-            {/* Decoração adicional */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-tl from-secondary/20 to-transparent rounded-full blur-2xl" />
+              </div>
+            ))}
           </div>
-
         </div>
 
         {/* Stats - Movido para baixo */}
