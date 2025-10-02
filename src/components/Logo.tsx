@@ -16,9 +16,9 @@ export const Logo = ({
   logoSrc = "/moni2.png"
 }: LogoProps) => {
   const sizeClasses = {
-    sm: "h-6",
-    md: "h-8", 
-    lg: "h-10"
+    sm: "h-8",
+    md: "h-12", 
+    lg: "h-16"
   };
 
   const textSizeClasses = {
@@ -46,7 +46,8 @@ export const Logo = ({
       <img 
         src={logoSrc} 
         alt="Monitorar Consultoria Logo" 
-        className={`${sizeClasses[size]} object-contain`}
+        className={`${sizeClasses[size]} w-auto object-contain`}
+        style={{ maxHeight: size === "sm" ? "32px" : size === "md" ? "48px" : "64px" }}
       />
       {showText && (
         <div>
