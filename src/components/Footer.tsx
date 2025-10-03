@@ -74,7 +74,7 @@ export const Footer = () => {
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
           <p className="text-sm opacity-90">
-            © 2024 Monitorar Consultoria. Todos os direitos reservados.
+            © 2025 Monitorar Consultoria. Todos os direitos reservados. | Desenvolvido por Bernardo Tavares.
           </p>
         </div>
       </div>

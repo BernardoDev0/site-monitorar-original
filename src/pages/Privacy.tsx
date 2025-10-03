@@ -8,7 +8,7 @@ export default function Privacy() {
         <div className="text-center mb-16">
           <h1 className="section-title">Política de Privacidade</h1>
           <p className="text-lg text-muted-foreground">
-            Última atualização: 24 de setembro de 2024
+            Última atualização: 24 de setembro de 2025
           </p>
         </div>
 

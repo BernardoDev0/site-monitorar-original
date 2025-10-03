@@ -182,7 +182,7 @@ export default function About() {
                 
                 <Card className="card-service p-8 border-l-4 border-l-accent">
                   <CardContent className="p-0">
-                    <h3 className="text-2xl font-bold text-accent mb-4">2024 - Consolidação</h3>
+                    <h3 className="text-2xl font-bold text-accent mb-4">2025 - Consolidação</h3>
                     <p className="text-lg text-muted-foreground leading-relaxed">
                       16 anos depois, alcançamos a 33ª posição no ranking da revista Exame com crescimento de 800% em faturamento, atendendo mais de 100 clientes.
                     </p>
